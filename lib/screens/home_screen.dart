@@ -39,7 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 future: getPostApi(),
                 builder: (context, snapShot) {
                   if (!snapShot.hasData) {
-                    return Center(
+                    return const Center(
                       child: CircularProgressIndicator(),
                     );
                   } else {
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 postList[index].id.toString(),
                               ),
-                              Text(
+                              const Text(
                                 'Title',
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               Text(
                                 postList[index].title.toString(),
                               ),
-                              Text(
+                              const Text(
                                 'Discription',
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),

@@ -1,4 +1,5 @@
-import 'package:api/screens/home_screen.dart';
+import 'package:api/screens/get_api_custom_model.dart';
+// import 'package:api/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeScreen(),
+      home:
+          // HomeScreen()
+          GetApiEx2(),
     );
   }
 }
