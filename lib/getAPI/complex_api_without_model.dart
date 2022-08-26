@@ -1,17 +1,16 @@
 import 'dart:convert';
-import 'package:api/screens/user_api.dart';
+import 'package:api/getAPI/user_api.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class ComplexAPIWithCustomModel extends StatefulWidget {
-  const ComplexAPIWithCustomModel({Key? key}) : super(key: key);
+class ComplexAPIWithoutModel extends StatefulWidget {
+  const ComplexAPIWithoutModel({Key? key}) : super(key: key);
 
   @override
-  State<ComplexAPIWithCustomModel> createState() =>
-      _ComplexAPIWithCustomModelState();
+  State<ComplexAPIWithoutModel> createState() => _ComplexAPIWithoutModelState();
 }
 
-class _ComplexAPIWithCustomModelState extends State<ComplexAPIWithCustomModel> {
+class _ComplexAPIWithoutModelState extends State<ComplexAPIWithoutModel> {
   var data;
   Future<void> getUserAPI() async {
     final response =
