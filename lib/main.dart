@@ -1,4 +1,5 @@
 // import 'package:api/screens/get_api_custom_model.dart';
+import 'package:api/screens/complex_api_with_custom_model.dart';
 import 'package:api/screens/user_api.dart';
 // import 'package:api/screens/home_screen.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       home:
           // HomeScreen()
           // GetApiEx2(),
-          GetUsersAPI(),
+          // GetUsersAPI(),
+          ComplexAPIWithCustomModel(),
     );
   }
 }
