@@ -1,5 +1,5 @@
 // import 'package:api/screens/home_screen.dart';
-import 'package:api/getAPI/complex_api_without_model.dart';
+import 'package:api/postAPI/sign_up.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,11 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home:
           // HomeScreen()
           // GetApiEx2(),
           // GetUsersAPI(),
-          ComplexAPIWithoutModel(),
+          // ComplexAPIWithoutModel(),
+          SignUpScreen(),
     );
   }
 }

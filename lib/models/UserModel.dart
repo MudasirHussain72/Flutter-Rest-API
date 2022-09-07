@@ -7,16 +7,19 @@
 /// website : "hildegard.org"
 /// company : {"name":"Romaguera-Crona","catchPhrase":"Multi-layered client-server neural-net","bs":"harness real-time e-markets"}
 
+// ignore_for_file: file_names
+
 class UserModel {
   UserModel({
-      num? id, 
-      String? name, 
-      String? username, 
-      String? email, 
-      Address? address, 
-      String? phone, 
-      String? website, 
-      Company? company,}){
+    num? id,
+    String? name,
+    String? username,
+    String? email,
+    Address? address,
+    String? phone,
+    String? website,
+    Company? company,
+  }) {
     _id = id;
     _name = name;
     _username = username;
@@ -25,17 +28,19 @@ class UserModel {
     _phone = phone;
     _website = website;
     _company = company;
-}
+  }
 
   UserModel.fromJson(dynamic json) {
     _id = json['id'];
     _name = json['name'];
     _username = json['username'];
     _email = json['email'];
-    _address = json['address'] != null ? Address.fromJson(json['address']) : null;
+    _address =
+        json['address'] != null ? Address.fromJson(json['address']) : null;
     _phone = json['phone'];
     _website = json['website'];
-    _company = json['company'] != null ? Company.fromJson(json['company']) : null;
+    _company =
+        json['company'] != null ? Company.fromJson(json['company']) : null;
   }
   num? _id;
   String? _name;
@@ -45,23 +50,26 @@ class UserModel {
   String? _phone;
   String? _website;
   Company? _company;
-UserModel copyWith({  num? id,
-  String? name,
-  String? username,
-  String? email,
-  Address? address,
-  String? phone,
-  String? website,
-  Company? company,
-}) => UserModel(  id: id ?? _id,
-  name: name ?? _name,
-  username: username ?? _username,
-  email: email ?? _email,
-  address: address ?? _address,
-  phone: phone ?? _phone,
-  website: website ?? _website,
-  company: company ?? _company,
-);
+  UserModel copyWith({
+    num? id,
+    String? name,
+    String? username,
+    String? email,
+    Address? address,
+    String? phone,
+    String? website,
+    Company? company,
+  }) =>
+      UserModel(
+        id: id ?? _id,
+        name: name ?? _name,
+        username: username ?? _username,
+        email: email ?? _email,
+        address: address ?? _address,
+        phone: phone ?? _phone,
+        website: website ?? _website,
+        company: company ?? _company,
+      );
   num? get id => _id;
   String? get name => _name;
   String? get username => _username;
@@ -87,7 +95,6 @@ UserModel copyWith({  num? id,
     }
     return map;
   }
-
 }
 
 /// name : "Romaguera-Crona"
@@ -96,13 +103,14 @@ UserModel copyWith({  num? id,
 
 class Company {
   Company({
-      String? name, 
-      String? catchPhrase, 
-      String? bs,}){
+    String? name,
+    String? catchPhrase,
+    String? bs,
+  }) {
     _name = name;
     _catchPhrase = catchPhrase;
     _bs = bs;
-}
+  }
 
   Company.fromJson(dynamic json) {
     _name = json['name'];
@@ -112,13 +120,16 @@ class Company {
   String? _name;
   String? _catchPhrase;
   String? _bs;
-Company copyWith({  String? name,
-  String? catchPhrase,
-  String? bs,
-}) => Company(  name: name ?? _name,
-  catchPhrase: catchPhrase ?? _catchPhrase,
-  bs: bs ?? _bs,
-);
+  Company copyWith({
+    String? name,
+    String? catchPhrase,
+    String? bs,
+  }) =>
+      Company(
+        name: name ?? _name,
+        catchPhrase: catchPhrase ?? _catchPhrase,
+        bs: bs ?? _bs,
+      );
   String? get name => _name;
   String? get catchPhrase => _catchPhrase;
   String? get bs => _bs;
@@ -130,7 +141,6 @@ Company copyWith({  String? name,
     map['bs'] = _bs;
     return map;
   }
-
 }
 
 /// street : "Kulas Light"
@@ -141,17 +151,18 @@ Company copyWith({  String? name,
 
 class Address {
   Address({
-      String? street, 
-      String? suite, 
-      String? city, 
-      String? zipcode, 
-      Geo? geo,}){
+    String? street,
+    String? suite,
+    String? city,
+    String? zipcode,
+    Geo? geo,
+  }) {
     _street = street;
     _suite = suite;
     _city = city;
     _zipcode = zipcode;
     _geo = geo;
-}
+  }
 
   Address.fromJson(dynamic json) {
     _street = json['street'];
@@ -165,17 +176,20 @@ class Address {
   String? _city;
   String? _zipcode;
   Geo? _geo;
-Address copyWith({  String? street,
-  String? suite,
-  String? city,
-  String? zipcode,
-  Geo? geo,
-}) => Address(  street: street ?? _street,
-  suite: suite ?? _suite,
-  city: city ?? _city,
-  zipcode: zipcode ?? _zipcode,
-  geo: geo ?? _geo,
-);
+  Address copyWith({
+    String? street,
+    String? suite,
+    String? city,
+    String? zipcode,
+    Geo? geo,
+  }) =>
+      Address(
+        street: street ?? _street,
+        suite: suite ?? _suite,
+        city: city ?? _city,
+        zipcode: zipcode ?? _zipcode,
+        geo: geo ?? _geo,
+      );
   String? get street => _street;
   String? get suite => _suite;
   String? get city => _city;
@@ -193,7 +207,6 @@ Address copyWith({  String? street,
     }
     return map;
   }
-
 }
 
 /// lat : "-37.3159"
@@ -201,11 +214,12 @@ Address copyWith({  String? street,
 
 class Geo {
   Geo({
-      String? lat, 
-      String? lng,}){
+    String? lat,
+    String? lng,
+  }) {
     _lat = lat;
     _lng = lng;
-}
+  }
 
   Geo.fromJson(dynamic json) {
     _lat = json['lat'];
@@ -213,11 +227,14 @@ class Geo {
   }
   String? _lat;
   String? _lng;
-Geo copyWith({  String? lat,
-  String? lng,
-}) => Geo(  lat: lat ?? _lat,
-  lng: lng ?? _lng,
-);
+  Geo copyWith({
+    String? lat,
+    String? lng,
+  }) =>
+      Geo(
+        lat: lat ?? _lat,
+        lng: lng ?? _lng,
+      );
   String? get lat => _lat;
   String? get lng => _lng;
 
@@ -227,5 +244,4 @@ Geo copyWith({  String? lat,
     map['lng'] = _lng;
     return map;
   }
-
 }

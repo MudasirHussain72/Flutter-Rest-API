@@ -87,14 +87,15 @@ class _GetUsersAPIState extends State<GetUsersAPI> {
   }
 }
 
+// ignore: must_be_immutable
 class ReUsableRow extends StatelessWidget {
   String title;
   String value;
 
-  ReUsableRow({
+  ReUsableRow({Key? key, 
     required this.title,
     required this.value,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

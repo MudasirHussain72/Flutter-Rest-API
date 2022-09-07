@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_interpolation_to_compose_strings
+
 import 'dart:convert';
 import 'package:api/getAPI/user_api.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,7 @@ class ComplexAPIWithoutModel extends StatefulWidget {
 }
 
 class _ComplexAPIWithoutModelState extends State<ComplexAPIWithoutModel> {
+  // ignore: prefer_typing_uninitialized_variables
   var data;
   Future<void> getUserAPI() async {
     final response =
@@ -34,7 +37,7 @@ class _ComplexAPIWithoutModelState extends State<ComplexAPIWithoutModel> {
                 future: getUserAPI(),
                 builder: ((context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    return Text("loading");
+                    return const Text("loading");
                   } else {
                     // return Text(data[0]['name'].toString());
                     return ListView.builder(
