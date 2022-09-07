@@ -50,6 +50,7 @@ class _UploadImageScreenState extends State<UploadImageScreen> {
       print("failed");
       setState(() {
         showSpinner = false;
+        //
       });
     }
   }
