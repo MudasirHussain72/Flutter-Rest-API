@@ -1,5 +1,6 @@
 // import 'package:api/screens/home_screen.dart';
 import 'package:api/postAPI/sign_up.dart';
+import 'package:api/postAPI/upload_image.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
           // GetApiEx2(),
           // GetUsersAPI(),
           // ComplexAPIWithoutModel(),
-          SignUpScreen(),
+          // SignUpScreen(),
+          UploadImageScreen(),
     );
   }
 }
